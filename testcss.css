@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.back{
+    height: 2222px;
+    width:100vw;
+    background-color: #030303;
+    opacity: 0.8;
+    background-image:  linear-gradient(30deg, #f47f08 12%, transparent 12.5%, transparent 87%, #f47f08 87.5%, #f47f08), linear-gradient(150deg, #f47f08 12%, transparent 12.5%, transparent 87%, #f47f08 87.5%, #f47f08), linear-gradient(30deg, #f47f08 12%, transparent 12.5%, transparent 87%, #f47f08 87.5%, #f47f08), linear-gradient(150deg, #f47f08 12%, transparent 12.5%, transparent 87%, #f47f08 87.5%, #f47f08), linear-gradient(60deg, #f47f0877 25%, transparent 25.5%, transparent 75%, #f47f0877 75%, #f47f0877), linear-gradient(60deg, #f47f0877 25%, transparent 25.5%, transparent 75%, #f47f0877 75%, #f47f0877);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    padding: 0px;
+    align-items: center;
+    background-attachment: fixed;
+    font-family: Oswald;
+}
+
+#up{
+    
+    color: black;
+    background-image: linear-gradient(45deg,orangered, gold, orangered);
+    text-shadow: 1px 5px  gray;
+    font-size: 5rem;
+    display: block;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    width: 100vw;
+
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Slider{
+    margin-top: 100px;
+    margin-left: 550px;
+    margin-bottom: 100px;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    animation: rotateim 30s linear infinite;
+}
+
+@keyframes rotateim
+{
+    0% { transform: perspective(1000px) rotateY(0deg); }
+    100% { transform: perspective(1000px) rotateY(360deg); }
+}
+
+span{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width:100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+
+}
+
+img{position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 150%;
+    transition: 2s;
+    outline-offset: 2px;
+    outline: 8px solid whitesmoke;
+
+    border-radius: 1px 31px;
+    object-fit: cover;
+    transform: rotateY( calc(var(--i)*72deg)) translateZ(350px);
+}
+
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.5);
+}
+
+.buffer2
+{
+    position: sticky;
+    top: 11px ;
+    display: block;
+    margin: 20px;
+    color: azure;
+    background-image: linear-gradient(45deg, orangered, black);
+    padding: 20px;
+    
+    
+}
+p{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.buffer1
+{
+    letter-spacing: 3px;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    color: azure;
+    background-color: gray;
+    padding: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}   
+    
